@@ -64,3 +64,6 @@ Ejecuta comprobación de tipos, 4 pruebas de configuración, build y 9 pruebas H
 La prueba de SSR compara un identificador no visible generado en cada respuesta, comprueba `Cache-Control: no-store` y verifica que `/` no esté en el manifiesto de páginas prerenderizadas. Además valida HTML sin scripts, URLs de ejecución, anclas, fuentes, estilos, scripts, metadatos, sitemap, robots, salud y 404.
 
 Consulta [la guía de Dokploy](docs/DOKPLOY.md) y [los resultados de validación](docs/VALIDATION.md). Esta entrega es exclusivamente local: no se ha publicado el repositorio ni desplegado el sitio.
+# Despliegue continuo
+
+Los cambios enviados a la rama `main` activan un despliegue automático en Dokploy mediante el webhook configurado en GitHub.
