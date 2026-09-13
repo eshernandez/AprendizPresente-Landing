@@ -1,0 +1,33 @@
+{
+  "name": "aprendizpresente-landing-ssr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing de AprendizPresente con React y SSR por petición, preparada para Docker y Dokploy.",
+  "engines": {
+    "node": ">=22.14.0 <25"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "postbuild": "node scripts/prepare-standalone.mjs",
+    "start": "node .next/standalone/server.js",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "test:ssr": "node --test tests/production/*.test.mjs",
+    "verify": "npm run typecheck && npm test && npm run build && npm run test:ssr"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "lucide-react": "1.45.0",
+    "next": "16.3.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}
