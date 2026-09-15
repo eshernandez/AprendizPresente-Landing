@@ -7,6 +7,7 @@ test("los valores por defecto separan la landing de la aplicación", () => {
   assert.equal(config.siteUrl, "https://landing.aprendizpresente.soysantiago.tech");
   assert.equal(config.loginUrl, "https://aprendizpresente.soysantiago.tech/login");
   assert.equal(config.registerUrl, "https://aprendizpresente.soysantiago.tech/register");
+  assert.equal(config.instructorRegisterUrl, "https://aprendizpresente.soysantiago.tech/register?origin=landing");
 });
 
 test("las URLs se leen en cada llamada y normalizan la barra final", () => {

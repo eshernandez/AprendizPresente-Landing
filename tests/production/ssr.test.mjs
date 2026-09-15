@@ -78,7 +78,7 @@ test("cada petición vuelve a renderizar y evita la caché estática", async () 
 test("canonical, metadata y enlaces leen variables de ejecución", () => {
   assert.ok(html.includes(`rel="canonical" href="${runtimeSite}"`) || html.includes(`rel="canonical" href="${runtimeSite}/"`));
   assert.ok(html.includes(`href="${runtimeApp}/login"`));
-  assert.ok(html.includes(`href="${runtimeApp}/register"`));
+  assert.ok(html.includes(`href="${runtimeApp}/register?origin=landing"`));
   assert.match(html, /name="description"/);
   assert.match(html, /property="og:locale" content="es_CO"/);
   assert.match(html, /property="og:title"/);

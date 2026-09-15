@@ -25,7 +25,13 @@ export function getSiteConfig(environment = process.env) {
     environment.APP_URL ?? "https://aprendizpresente.soysantiago.tech",
     "APP_URL",
   );
-  return { siteUrl, appUrl, loginUrl: `${appUrl}/login`, registerUrl: `${appUrl}/register` };
+  return {
+    siteUrl,
+    appUrl,
+    loginUrl: `${appUrl}/login`,
+    registerUrl: `${appUrl}/register`,
+    instructorRegisterUrl: `${appUrl}/register?origin=landing`,
+  };
 }
 
 export const siteTitle = "AprendizPresente | Asistencia y gestión para instructores";

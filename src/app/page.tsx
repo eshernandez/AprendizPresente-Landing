@@ -25,7 +25,7 @@ const instructorFeatures = [
 ];
 
 export default function Home() {
-  const { loginUrl, registerUrl } = getSiteConfig();
+  const { loginUrl, instructorRegisterUrl } = getSiteConfig();
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
@@ -40,7 +40,7 @@ export default function Home() {
               <p className="eyebrow"><span className="eyebrow-line" /> GESTIÓN DE LA FORMACIÓN</p>
               <h1 id="hero-title">Más tiempo<br />para enseñar.<br />Todos <em>presentes.</em></h1>
               <p className="hero-lead">AprendizPresente reúne asistencia, grupos y clases en un solo lugar. Menos registros dispersos, más atención a cada aprendiz.</p>
-              <div className="hero-actions"><a className="button button-lime" href={registerUrl}>Empezar en AprendizPresente <ArrowRight size={18} aria-hidden="true" /></a><a className="text-link" href="#modulos">Explorar módulos <span aria-hidden="true">↓</span></a></div>
+              <div className="hero-actions"><a className="button button-lime" href={instructorRegisterUrl}>Empezar en AprendizPresente <ArrowRight size={18} aria-hidden="true" /></a><a className="text-link" href="#modulos">Explorar módulos <span aria-hidden="true">↓</span></a></div>
               <p className="hero-note"><Check size={17} aria-hidden="true" /> Pensado para el día a día del instructor.</p>
             </div>
             <JourneyPreview />
@@ -61,7 +61,7 @@ export default function Home() {
 
         <section className="flow-section" id="como-funciona" aria-labelledby="flow-title"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">ASÍ FUNCIONA</p><h2 id="flow-title">Un ritmo sencillo.<br /><em>De principio a fin.</em></h2></div><p>La organización y el seguimiento forman parte de la misma jornada.</p></div><ol className="flow-grid">{[["Crea tu grupo", "Organiza la ficha y comparte la invitación con los aprendices."], ["Programa la clase", "Define el horario, la modalidad y las condiciones del registro."], ["Registra la asistencia", "Activa la sesión y permite que cada aprendiz escanee el QR."], ["Revisa y acompaña", "Consulta el historial y da seguimiento a las novedades."]].map(([title, detail], index) => <li key={title}><span className="flow-number">0{index + 1}</span><h3>{title}</h3><p>{detail}</p></li>)}</ol></div></section>
 
-        <section className="cta-section wrap" aria-labelledby="cta-title"><div><p className="eyebrow">LA PRÓXIMA CLASE EMPIEZA CONTIGO</p><h2 id="cta-title">Haz espacio para<br />lo que importa: <em>enseñar.</em></h2></div><div className="cta-actions"><a className="button button-dark" href={registerUrl}>Crear mi cuenta <ArrowRight size={18} aria-hidden="true" /></a><a href={loginUrl}>Ya tengo una cuenta</a></div></section>
+        <section className="cta-section wrap" aria-labelledby="cta-title"><div><p className="eyebrow">LA PRÓXIMA CLASE EMPIEZA CONTIGO</p><h2 id="cta-title">Haz espacio para<br />lo que importa: <em>enseñar.</em></h2></div><div className="cta-actions"><a className="button button-dark" href={instructorRegisterUrl}>Crear mi cuenta <ArrowRight size={18} aria-hidden="true" /></a><a href={loginUrl}>Ya tengo una cuenta</a></div></section>
       </main>
       <footer className="site-footer"><div className="wrap"><Brand /><p>Formación con presencia.</p><a href={loginUrl}>Ir a la plataforma <ArrowUpRight size={16} aria-hidden="true" /></a></div></footer>
     </>
